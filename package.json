@@ -1,0 +1,28 @@
+{
+  "name": "reportes-express",
+  "version": "1.0.0",
+  "description": "Servicio de login y edicion",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ProyectosNode/Modelo-Reportes.git"
+  },
+  "author": "IsaiRC93",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ProyectosNode/Modelo-Reportes/issues"
+  },
+  "homepage": "https://github.com/ProyectosNode/Modelo-Reportes#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "pug": "^2.0.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}

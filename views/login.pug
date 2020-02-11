@@ -1,0 +1,92 @@
+doctype html
+html(lang='en')
+  head
+    // Import Google Icon Font
+    link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+    // Compiled and minified CSS
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css')
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    title Acceder
+    link(rel='stylesheet', href='/static/assets/main.css')
+  body
+    header
+      .menu_bar
+        a.bt-menu(href='#')
+          span.material-icons menu
+          | Menú
+      nav.container
+        ul.center.valing-wrapper
+          li
+            a(href='#')
+              span.material-icons home
+              | Inicio
+          li
+            a(href='#')
+              span.material-icons report
+              | Reportes
+          li
+            a(href='#')
+              span.material-icons send
+              | Proyectos
+          li
+            a(href='#')
+              span.material-icons work
+              | Servicios
+          li
+            a(href='#')
+              span.material-icons person
+              | Perfil
+      section.container.center
+        .row
+          .col.s12
+            h4(style='color:#024959;') Panel de Acceso a Usuarios:
+    main.container
+      .container(style='width: 400px; height: 400px;')
+        .col
+          .col.z-depth-3.card-panel.border-radius-6
+            form(action='/perfil', method='post')
+              br
+              div
+                label(for='email', style='color: #024959;') Email:
+                input#email.validate(type='email')
+              div
+                label(for='password', style='color: #024959;') Password:
+                input#password.validate(type='password')
+              br
+              .center
+                button.btn.waves-effect(style='background-color: #024959; color: #a0e7e4;', type='submit', name='action')
+                  | Entrar
+                  i.small.material-icons.right lock_outline
+              br
+              .center
+                | No tienes una cuenta?
+                a(href='#', style='color:#024959;') Crear cuenta
+              br
+              .center
+                a(href='#', style='color:#024959;') ¿Olvidó su contraseña?
+    br
+    footer.page-footer.container.center-align © 2020 Investigación y Desarrollo
+    // Compiled and minified JavaScript
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js')
+    script(src='http://code.jquery.com/jquery-latest.js')
+    script.
+      $(document).ready(main);
+      var contador = 1;
+      function main() {
+      $('.menu_bar').click(function () {
+      // $('nav').toggle(); // Forma Sencilla de aparecer y desaparecer
+      if (contador == 1) {
+      $('nav').animate({
+      left: '0'
+      });
+      contador = 0;
+      } else {
+      contador = 1;
+      $('nav').animate({
+      left: '-100%'
+      });
+      };
+      });
+      };
